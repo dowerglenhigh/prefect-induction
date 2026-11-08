@@ -1,0 +1,840 @@
+/* =========================================
+DOWERGLEN HIGH SCHOOL
+PREFECT INDUCTION CEREMONY 2027
+BLACK & PEARLS
+========================================= */
+
+
+/* =========================================
+1. COLOUR PALETTE & FONTS
+========================================= */
+
+:root {
+--black: #080808;
+--soft-black: #111111;
+--deep-black: #050505;
+
+--pearl: #F5F1E9;
+--champagne: #D8C5A3;
+--soft-champagne: #E8DCC5;
+
+--white: #FFFFFF;
+--grey: #A7A7A7;
+--dark-grey: #242424;
+
+--heading-font: 'Cormorant Garamond', serif;
+--body-font: 'Montserrat', sans-serif;
+}
+
+
+/* =========================================
+2. GENERAL RESET
+========================================= */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--black);
+color: var(--white);
+font-family: var(--body-font);
+line-height: 1.7;
+overflow-x: hidden;
+}
+
+button {
+font-family: inherit;
+}
+
+
+/* =========================================
+3. HERO SECTION
+========================================= */
+
+.hero {
+min-height: 100vh;
+position: relative;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+
+padding: 80px 20px;
+
+background:
+radial-gradient(
+circle at center,
+#24201B 0%,
+#111111 45%,
+#050505 100%
+);
+
+overflow: hidden;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+
+max-width: 900px;
+width: 100%;
+
+animation: fadeIn 1.5s ease forwards;
+}
+
+
+/* =========================================
+4. SCHOOL EMBLEM
+========================================= */
+
+.school-emblem {
+width: 65px;
+height: 65px;
+
+object-fit: contain;
+
+display: block;
+
+margin: 0 auto 15px;
+
+filter: drop-shadow(
+0 3px 8px rgba(255, 255, 255, 0.12)
+);
+
+animation: emblemFadeIn 1.5s ease forwards;
+}
+
+@keyframes emblemFadeIn {
+from {
+opacity: 0;
+transform: translateY(-12px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+
+/* =========================================
+5. HERO TYPOGRAPHY
+========================================= */
+
+.school-name {
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 5px;
+
+color: var(--champagne);
+
+margin-bottom: 25px;
+}
+
+.event-label {
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 5px;
+
+color: var(--grey);
+
+margin-bottom: 20px;
+}
+
+.hero h1 {
+font-family: var(--heading-font);
+
+font-size: clamp(48px, 8vw, 85px);
+
+font-weight: 400;
+line-height: 1.1;
+
+color: var(--pearl);
+
+margin-bottom: 25px;
+}
+
+.hero-subtitle {
+font-size: 14px;
+font-weight: 300;
+
+letter-spacing: 1px;
+
+color: var(--grey);
+
+margin-bottom: 35px;
+}
+
+.hero-details {
+display: flex;
+justify-content: center;
+align-items: center;
+
+gap: 18px;
+
+font-size: 11px;
+font-weight: 500;
+
+letter-spacing: 3px;
+
+color: var(--champagne);
+
+margin-bottom: 20px;
+}
+
+.detail-divider {
+color: var(--grey);
+}
+
+.theme-label {
+font-size: 10px;
+letter-spacing: 6px;
+
+color: var(--pearl);
+
+margin-bottom: 35px;
+}
+
+
+/* =========================================
+6. ENTER BUTTON
+========================================= */
+
+.enter-button {
+background: transparent;
+
+border: 1px solid var(--champagne);
+
+color: var(--champagne);
+
+padding: 15px 35px;
+
+font-size: 10px;
+letter-spacing: 3px;
+
+text-transform: uppercase;
+
+cursor: pointer;
+
+transition: all 0.4s ease;
+}
+
+.enter-button:hover {
+background: var(--champagne);
+color: var(--black);
+
+transform: translateY(-3px);
+}
+
+
+/* =========================================
+7. DECORATIVE PEARLS
+========================================= */
+
+.pearl {
+position: absolute;
+
+border-radius: 50%;
+
+background:
+radial-gradient(
+circle at 30% 25%,
+#FFFFFF 0%,
+#F5F1E9 25%,
+#D8C5A3 65%,
+#A99576 100%
+);
+
+box-shadow:
+0 5px 25px rgba(255, 255, 255, 0.12);
+
+opacity: 0.65;
+
+animation: float 6s ease-in-out infinite;
+}
+
+.pearl-one {
+width: 18px;
+height: 18px;
+
+top: 15%;
+left: 12%;
+}
+
+.pearl-two {
+width: 12px;
+height: 12px;
+
+top: 30%;
+right: 15%;
+
+animation-delay: 1s;
+}
+
+.pearl-three {
+width: 24px;
+height: 24px;
+
+bottom: 20%;
+left: 18%;
+
+animation-delay: 2s;
+}
+
+.pearl-four {
+width: 15px;
+height: 15px;
+
+bottom: 15%;
+right: 20%;
+
+animation-delay: 3s;
+}
+
+.pearl-five {
+width: 10px;
+height: 10px;
+
+top: 55%;
+left: 8%;
+
+animation-delay: 1.5s;
+}
+
+
+/* =========================================
+8. COUNTDOWN SECTION
+========================================= */
+
+.countdown-section {
+background: var(--soft-black);
+
+padding: 100px 20px;
+
+text-align: center;
+}
+
+.section-content {
+max-width: 900px;
+margin: auto;
+}
+
+.section-label {
+font-size: 10px;
+font-weight: 600;
+
+letter-spacing: 5px;
+
+color: var(--champagne);
+
+margin-bottom: 20px;
+}
+
+.countdown-section h2 {
+font-family: var(--heading-font);
+
+font-size: clamp(35px, 5vw, 55px);
+
+font-weight: 400;
+
+color: var(--pearl);
+
+margin-bottom: 45px;
+}
+
+.countdown {
+display: flex;
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 20px;
+}
+
+.countdown-box {
+width: 130px;
+
+padding: 25px 15px;
+
+border: 1px solid rgba(216, 197, 163, 0.3);
+
+background: rgba(255, 255, 255, 0.02);
+}
+
+.countdown-box span {
+display: block;
+
+font-family: var(--heading-font);
+
+font-size: 48px;
+
+color: var(--champagne);
+
+line-height: 1.2;
+}
+
+.countdown-box p {
+font-size: 9px;
+
+text-transform: uppercase;
+
+letter-spacing: 3px;
+
+color: var(--grey);
+
+margin-top: 10px;
+}
+
+.countdown-note {
+font-size: 12px;
+
+color: var(--grey);
+
+margin-top: 35px;
+
+letter-spacing: 1px;
+}
+
+.event-started {
+font-family: var(--heading-font);
+
+font-size: 35px;
+
+color: var(--champagne);
+}
+
+
+/* =========================================
+9. MYSTERY / REVEAL SECTION
+========================================= */
+
+.mystery-section {
+min-height: 550px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+
+padding: 100px 25px;
+
+background:
+radial-gradient(
+circle at center,
+#1D1A16 0%,
+#080808 70%
+);
+}
+
+.mystery-content {
+max-width: 750px;
+}
+
+.mystery-content h2 {
+font-family: var(--heading-font);
+
+font-size: clamp(40px, 6vw, 65px);
+
+font-weight: 400;
+
+color: var(--pearl);
+
+margin-bottom: 30px;
+}
+
+.mystery-divider {
+width: 65px;
+height: 1px;
+
+background: var(--champagne);
+
+margin: 0 auto 35px;
+}
+
+.mystery-content p:not(.section-label) {
+font-size: 14px;
+
+font-weight: 300;
+
+color: var(--grey);
+
+line-height: 2;
+
+margin-bottom: 20px;
+}
+
+.mystery-content .mystery-ending {
+color: var(--champagne);
+
+font-family: var(--heading-font);
+
+font-size: 23px;
+
+font-style: italic;
+
+margin-top: 35px;
+}
+
+
+/* =========================================
+10. ABOUT THE EVENING
+========================================= */
+
+.about-section {
+background: var(--pearl);
+
+color: var(--black);
+
+padding: 110px 25px;
+}
+
+.about-container {
+max-width: 850px;
+
+margin: auto;
+
+text-align: center;
+}
+
+.about-container .section-label {
+color: #947C59;
+}
+
+.about-container h2 {
+font-family: var(--heading-font);
+
+font-size: clamp(45px, 6vw, 65px);
+
+font-weight: 400;
+
+color: var(--black);
+
+margin-bottom: 20px;
+}
+
+.about-divider {
+width: 60px;
+height: 1px;
+
+background: #B9A27F;
+
+margin: 0 auto 35px;
+}
+
+.about-intro {
+font-family: var(--heading-font);
+
+font-size: 25px;
+
+color: #6F5D45;
+
+margin-bottom: 35px;
+}
+
+.about-container > p:not(.section-label):not(.about-intro) {
+font-size: 13px;
+
+line-height: 2;
+
+color: #555555;
+
+margin-bottom: 22px;
+}
+
+.about-container strong {
+color: #6F5D45;
+font-weight: 700;
+}
+
+.about-highlight {
+border-top: 1px solid #D8C5A3;
+
+border-bottom: 1px solid #D8C5A3;
+
+padding: 30px 15px;
+
+margin-top: 50px;
+}
+
+.about-highlight p {
+font-family: var(--heading-font);
+
+font-size: 24px;
+
+font-style: italic;
+
+color: #6F5D45;
+}
+
+
+/* =========================================
+11. FOOTER
+========================================= */
+
+.footer {
+background: var(--deep-black);
+
+text-align: center;
+
+padding: 65px 20px;
+}
+
+.footer-school {
+font-size: 12px;
+
+font-weight: 600;
+
+letter-spacing: 5px;
+
+color: var(--champagne);
+
+margin-bottom: 15px;
+}
+
+.footer > p:not(.footer-school) {
+font-size: 9px;
+
+letter-spacing: 3px;
+
+color: var(--grey);
+
+margin-bottom: 12px;
+}
+
+.footer-theme {
+color: var(--champagne) !important;
+}
+
+.footer-divider {
+width: 45px;
+height: 1px;
+
+background: var(--champagne);
+
+margin: 30px auto;
+}
+
+.footer .footer-closing {
+font-family: var(--heading-font);
+
+font-size: 20px !important;
+
+font-style: italic;
+
+letter-spacing: 1px !important;
+
+color: var(--pearl) !important;
+}
+
+
+/* =========================================
+12. ANIMATIONS
+========================================= */
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes float {
+0%, 100% {
+transform: translateY(0);
+}
+
+50% {
+transform: translateY(-15px);
+}
+}
+
+
+/* =========================================
+13. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+
+.hero {
+padding: 70px 20px;
+}
+
+.hero h1 {
+font-size: 58px;
+}
+
+.countdown-section {
+padding: 80px 20px;
+}
+
+.countdown-box {
+width: 110px;
+}
+
+.countdown-box span {
+font-size: 40px;
+}
+
+.about-section {
+padding: 85px 25px;
+}
+
+}
+
+
+/* =========================================
+14. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 480px) {
+
+.hero {
+min-height: 100svh;
+padding: 60px 20px;
+}
+
+.school-emblem {
+width: 55px;
+height: 55px;
+
+margin-bottom: 12px;
+}
+
+.school-name {
+font-size: 10px;
+letter-spacing: 3px;
+
+margin-bottom: 20px;
+}
+
+.event-label {
+font-size: 9px;
+letter-spacing: 3px;
+}
+
+.hero h1 {
+font-size: 46px;
+}
+
+.hero-subtitle {
+font-size: 12px;
+}
+
+.hero-details {
+gap: 10px;
+
+font-size: 9px;
+
+letter-spacing: 2px;
+}
+
+.theme-label {
+font-size: 9px;
+letter-spacing: 4px;
+}
+
+.enter-button {
+padding: 13px 25px;
+
+font-size: 9px;
+}
+
+.countdown-section {
+padding: 70px 15px;
+}
+
+.countdown-section h2 {
+font-size: 36px;
+}
+
+.countdown {
+gap: 10px;
+}
+
+.countdown-box {
+width: calc(50% - 10px);
+
+padding: 20px 10px;
+}
+
+.countdown-box span {
+font-size: 38px;
+}
+
+.mystery-section {
+min-height: 500px;
+
+padding: 80px 22px;
+}
+
+.mystery-content h2 {
+font-size: 42px;
+}
+
+.mystery-content p:not(.section-label) {
+font-size: 12px;
+}
+
+.about-section {
+padding: 75px 22px;
+}
+
+.about-container h2 {
+font-size: 48px;
+}
+
+.about-intro {
+font-size: 22px;
+}
+
+.about-container > p:not(.section-label):not(.about-intro) {
+font-size: 12px;
+}
+
+.about-highlight p {
+font-size: 21px;
+}
+
+.footer {
+padding: 55px 15px;
+}
+
+.footer-school {
+font-size: 10px;
+letter-spacing: 3px;
+}
+
+}
+
+
+/* =========================================
+15. ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+*,
+*::before,
+*::after {
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+
+scroll-behavior: auto !important;
+}
+
+}
